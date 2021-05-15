@@ -8,6 +8,7 @@
 \use_default_options true
 \begin_modules
 linguistics
+theorems-bytype
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -137,7 +138,23 @@ False
 \end_layout
 
 \begin_layout Enumerate
+True <for Gur, i think that for every union it holds that 
+\begin_inset Formula $T\subseteq T_{1}\cup T_{2}$
+\end_inset
 
+>
+\end_layout
+
+\begin_layout Enumerate
+False <if G is a line there is no circles>
+\end_layout
+
+\begin_layout Enumerate
+False <S can be an unconnected group>
+\end_layout
+
+\begin_layout Enumerate
+False?
 \end_layout
 
 \begin_layout Standard
@@ -155,19 +172,377 @@ False
 Q3:
 \end_layout
 
-\begin_deeper
 \begin_layout Subparagraph
-algorithm:
+algorithm: 
+\end_layout
+
+\begin_layout Enumerate
+Run the 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SCC
+\end_layout
+
+\end_inset
+
+ algorithm from the lecture.
+\end_layout
+
+\begin_layout Enumerate
+Starting from the smallest SCC, check for each vertex 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+V
+\end_layout
+
+\end_inset
+
+ in the component if there is an edge in 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+G
+\end_layout
+
+\end_inset
+
+ that starts in 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+V
+\end_layout
+
+\end_inset
+
+ and ends in another component.
+ if there isn't return the component as 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+U
+\end_layout
+
+\end_inset
+
+ and exit.
+\end_layout
+
+\begin_layout Enumerate
+Return 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+NULL
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subparagraph
 Correctness: 
 \end_layout
 
+\begin_layout Lemma
+If there is close group U in graph G, then it's one of the strongly connected
+ components.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Lets consider in contradicting that U is not one of the SCC.
+ meaning it has a mix of vertices form different SCC or it lacks a number
+ of vertices from his own SCC or there is multiple SCC's in U.
+\end_layout
+
+\begin_layout Proof
+In the first case, let 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+v
+\end_layout
+
+\end_inset
+
+ be the vertex form the SCC which is't present at his fullest.
+ because 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+v
+\end_layout
+
+\end_inset
+
+ is part of the SCC there's an edge form 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+v
+\end_layout
+
+\end_inset
+
+ to some other vertex in his SCC which isn't part of U - in contradiction
+ to U.
+\end_layout
+
+\begin_layout Proof
+In the second case, let 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+v
+\end_layout
+
+\end_inset
+
+ be one of the vertices in SCC.
+ by the definition of this case, there is at list one vertex form 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+v
+\end_layout
+
+\end_inset
+
+'s SCC which isn't part of U - lets say 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+w
+\end_layout
+
+\end_inset
+
+.
+ there is a path from 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+v
+\end_layout
+
+\end_inset
+
+to 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+w
+\end_layout
+
+\end_inset
+
+ (because they are part of the same SCC), let 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+u
+\end_layout
+
+\end_inset
+
+ be the last vertex in this path that is part of U.
+ meaning there is an edge from 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+u
+\end_layout
+
+\end_inset
+
+ to some other vertex outside of U - in contradiction to U.
+\end_layout
+
+\begin_layout Proof
+In the last case, let 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+A
+\end_layout
+
+\end_inset
+
+ be the first SCC and 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+B
+\end_layout
+
+\end_inset
+
+ be the second SCC.
+ we know that the SCC's are not well connected meaning there isn't a path
+ from 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+A
+\end_layout
+
+\end_inset
+
+ to 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+B
+\end_layout
+
+\end_inset
+
+ and from 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+B
+\end_layout
+
+\end_inset
+
+ to 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+A
+\end_layout
+
+\end_inset
+
+.
+ meaning there is at list one edge that crosses the two SCC's - especially
+ there isn't any two edge's form A to B and from B to A (because if there
+ were, A and B would have been one SCC).
+ and because both A and B are smaller then U - there is a contradiction
+ to the minimality of U.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using Lemma 1.
+ we know that one of the SCC is the smallest Closed Group.
+\end_layout
+
+\begin_layout Standard
+By iterating over the SCC's from the smallest one to the largest, we are
+ guaranteeing that we will receive the smallest Closed Group.
+ 
+\end_layout
+
 \begin_layout Subparagraph
 Complexity:
 \end_layout
 
-\end_deeper
+\begin_layout Standard
+Executing the SCC algorithm is 
+\begin_inset Formula $O(V+E)$
+\end_inset
+
+.
+ For each SCC we will check each of the vertices in the SCC if one of it
+ edges is crossing the SCC.
+\end_layout
+
+\begin_layout Standard
+meaning, we will iterate on the graph G checking each vertex and each edge
+ only once - time complexity of 
+\begin_inset Formula $O(E+V)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In conclusion, the time complexity is 
+\begin_inset Formula $O(E+V)$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
