@@ -36,7 +36,7 @@ theorems-bytype
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -61,10 +61,14 @@ theorems-bytype
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1.5cm
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip smallskip
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style english
@@ -82,32 +86,112 @@ theorems-bytype
 \begin_body
 
 \begin_layout Title
-
-\series bold
-\bar under
-Algo HW 2:
+Algo HW 2
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="2cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
-\series bold
-\bar under
-Q1:
+\begin_layout Plain Layout
+
+\size huge
+Dani Bondar - 206560856
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $\left\{ 8,9,10\right\} ,\left\{ 3,4\right\} ,\left\{ 1\right\} ,\left\{ 2\right\} ,\left\{ 5\right\} ,\left\{ 6\right\} ,\left\{ 7\right\} $
+\end_inset
+</cell>
+</row>
+<row topspace="1cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Gur Telem - 206631848
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Section Aleph
+\end_layout
+
+\begin_layout Standard
+Connected components: 
+\begin_inset Formula $V=\left\{ \left\{ 8,9,10\right\} ,\left\{ 3,4\right\} ,\left\{ 1\right\} ,\left\{ 2\right\} ,\left\{ 5,6\right\} ,\left\{ 7\right\} \right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Components graph: The graph is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E=\left\{ \left(\left\{ 1\right\} ,\left\{ 2\right\} \right),\left(\left\{ 1\right\} ,\left\{ 5,6\right\} \right),\left(\left\{ 2\right\} ,\left\{ 3,4\right\} \right),\left(\left\{ 2\right\} ,\left\{ 7\right\} \right),\left(\left\{ 3,4\right\} ,\left\{ 7\right\} \right),\left(\left\{ 5,6\right\} ,\left\{ 8,9,10\right\} \right),\left(\left\{ 7\right\} ,\left\{ 8,9,10\right\} \right)\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename AlgoHW2Q1Graph.jpeg
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Section Bet
+\end_layout
+
+\begin_layout Standard
 \begin_inset Flex Structure Tree
 status open
 
 \begin_layout Plain Layout
-[1[5][2[3][4]]]
+[2[3][4][1[5]]]
 \end_layout
 
 \end_inset
@@ -115,14 +199,18 @@ status open
 
 \end_layout
 
-\begin_layout Paragraph
-\begin_inset Separator plain
+\begin_layout Exercise
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
-\series bold
-\bar under
-Q2:
 \end_layout
 
 \begin_layout Enumerate
@@ -138,42 +226,44 @@ False
 \end_layout
 
 \begin_layout Enumerate
-True <for Gur, i think that for every union it holds that 
-\begin_inset Formula $T\subseteq T_{1}\cup T_{2}$
-\end_inset
-
->
+True
 \end_layout
 
 \begin_layout Enumerate
-False <if G is a line there is no circles>
+False
 \end_layout
 
 \begin_layout Enumerate
-False <S can be an unconnected group>
+False
 \end_layout
 
 \begin_layout Enumerate
-False?
+False
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
+\begin_inset Newpage newpage
 \end_inset
 
 
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Exercise
+\begin_inset listings
+inline true
+status open
 
-\series bold
-\bar under
-Q3:
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
-algorithm: 
+Algorithm: 
 \end_layout
 
 \begin_layout Enumerate
@@ -542,6 +632,246 @@ In conclusion, the time complexity is
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset FormulaMacro
+\newcommand{\tree}{}
+{\left(T\backslash\left\{ e\right\} \right)\cup\left\{ e'\right\} }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ undirected graph, connected with weights on the edges.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $T,T'$
+\end_inset
+
+ different minimal spanning trees of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $e\in T\backslash T'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $\exists e'\in T'\backslash T$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\tree$
+\end_inset
+
+ is a minimal spanning tree of 
+\begin_inset Formula $G$
+\end_inset
+
+ with weights.
+\end_layout
+
+\begin_layout Proof
+We will refer to 
+\begin_inset Formula $T$
+\end_inset
+
+ as the blue tree and 
+\begin_inset Formula $T'$
+\end_inset
+
+ as the red tree (this red/blue names are completely unrelated to the algorithms
+ we learned in class).
+\end_layout
+
+\begin_layout Proof
+After removing the blue edge 
+\begin_inset Formula $e$
+\end_inset
+
+ from 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ We get a forest of two trees.
+ Let's look at the cut separating the two connected components.
+ The blue edge 
+\begin_inset Formula $e$
+\end_inset
+
+ crosses the cut ofc because this is the edge that used to connect the subtrees.
+\end_layout
+
+\begin_layout Proof
+Now let's look at 
+\begin_inset Formula $T'\cup\left\{ e\right\} $
+\end_inset
+
+, this is ofc a graph with a cycle because it has an extra edge (because
+ of combinators).
+\end_layout
+
+\begin_layout Proof
+The edge 
+\begin_inset Formula $e$
+\end_inset
+
+ is part of the cycle (also combi).
+ Thus, there must be another red edge that crosses the cut (at least one).
+\end_layout
+
+\begin_layout Proof
+BWOC: Let's assume all the red edges that crosses the cut have higher weight
+ than the weight of 
+\begin_inset Formula $e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus, we can remove one of those red edges, let's mark it 
+\begin_inset Formula $l$
+\end_inset
+
+, and get a connected graph 
+\begin_inset Formula $\left(T\backslash\left\{ e\right\} \right)\cup\left\{ l\right\} $
+\end_inset
+
+ with 
+\begin_inset Formula $\left|V\right|-1$
+\end_inset
+
+ edges (it must be connected because of combi again: if it weren't, then
+ there is only a single simple path between the nodes of 
+\begin_inset Formula $l$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+For this new graph, the sum of weights is 
+\begin_inset Formula $w\left(T\right)+w\left(e\right)-w\left(l\right)\underset{w\left(e\right)<w\left(l\right)}{\underbrace{<}}w\left(T\right)$
+\end_inset
+
+ in contradiction to 
+\begin_inset Formula $T$
+\end_inset
+
+ being MST.
+\end_layout
+
+\begin_layout Proof
+Thus, exists a red edge 
+\begin_inset Formula $e'$
+\end_inset
+
+ that crosses the cut and 
+\begin_inset Formula $w\left(e'\right)=w\left(e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Note the 
+\begin_inset Formula $e'\notin T$
+\end_inset
+
+ because it crosses the cut and 
+\begin_inset Formula $e'\neq e$
+\end_inset
+
+ (the whole idea of the cut it separating the two connected components in
+ 
+\begin_inset Formula $T\backslash\left\{ e\right\} $
+\end_inset
+
+ which means there are no edge connecting them).
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $e'\in T'\backslash T$
+\end_inset
+
+ and 
+\begin_inset Formula $w\left(\tree\right)=w\left(T\right)-w\left(e\right)+w\left(e'\right)\underset{t=w\left(e\right)=w\left(e'\right)}{\underbrace{=}}w\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\tree$
+\end_inset
+
+ is built from two connected components with an edge connecting those two
+ connected components.
+ Also, 
+\begin_inset Formula $T$
+\end_inset
+
+ has 
+\begin_inset Formula $\left|V\right|-1$
+\end_inset
+
+ edges (because we removed an edge and added another one so we stayed with
+ 
+\begin_inset Formula $\left|V\right|-1$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Proof
+From those two claims, we get that 
+\begin_inset Formula $\tree$
+\end_inset
+
+ is an MST.
 \end_layout
 
 \end_body
