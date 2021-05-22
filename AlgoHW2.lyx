@@ -5,6 +5,14 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{xcolor}
+\pagecolor[rgb]{0.15,0.15,0.15} %black
+\color[rgb]{1,1,1} %grey
+
+\newfontfamily\mylistingsfont{Space Mono}
+\definecolor{lbcolor}{rgb}{0.3,0.3,0.3}
+\end_preamble
 \use_default_options true
 \begin_modules
 linguistics
@@ -20,7 +28,7 @@ theorems-bytype
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts false
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -76,6 +84,7 @@ theorems-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "basicstyle={\mylistingsfont},language={C++},backgroundcolor={\color{lbcolor}},showstringspaces=false"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -290,7 +299,7 @@ status open
 
 \begin_layout Plain Layout
 
-V
+v
 \end_layout
 
 \end_inset
@@ -302,24 +311,36 @@ status open
 
 \begin_layout Plain Layout
 
-G
+e
 \end_layout
 
 \end_inset
 
- that starts in 
+ from 
 \begin_inset listings
 inline true
 status open
 
 \begin_layout Plain Layout
 
-V
+v
 \end_layout
 
 \end_inset
 
- and ends in another component.
+ to a 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+v'
+\end_layout
+
+\end_inset
+
+ in another component.
  if there isn't return the component as 
 \begin_inset listings
 inline true
@@ -609,7 +630,7 @@ Complexity:
 
 \begin_layout Standard
 Executing the SCC algorithm is 
-\begin_inset Formula $O(V+E)$
+\begin_inset Formula $O\left(\left|V+E\right|\right)$
 \end_inset
 
 .
@@ -620,7 +641,7 @@ Executing the SCC algorithm is
 \begin_layout Standard
 meaning, we will iterate on the graph G checking each vertex and each edge
  only once - time complexity of 
-\begin_inset Formula $O(E+V)$
+\begin_inset Formula $O\left(\left|E+V\right|\right)$
 \end_inset
 
 .
@@ -628,7 +649,7 @@ meaning, we will iterate on the graph G checking each vertex and each edge
 
 \begin_layout Standard
 In conclusion, the time complexity is 
-\begin_inset Formula $O(E+V)$
+\begin_inset Formula $O\left(\left|E+V\right|\right)$
 \end_inset
 
 .
